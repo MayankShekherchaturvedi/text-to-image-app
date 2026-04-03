@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --color-primary: #00FFD1;      /* Cyberdeck Cyan */
+  --color-on-primary: #050505;   /* Very Dark */
+  --color-secondary: #FCEE0A;    /* Cyberpunk Yellow */
+  --color-accent: #FF003C;       /* Hostile Red */
+  --color-background: #0B0C10;   /* Deep Black/Grey */
+  --color-foreground: #00FFD1;   /* Neon Cyan UI text */
+  --color-muted: rgba(0, 255, 209, 0.05);
+  --color-border: rgba(0, 255, 209, 0.3);
+  --color-destructive: #FF003C;
+  --color-ring: #FCEE0A;         /* Focus brings up the alert yellow */
+
+  --panel-bg: rgba(11, 12, 16, 0.85); /* Transparent black overlay */
+  --panel-border: var(--color-border);
+  --font-heading: 'Rajdhani', sans-serif;
+  --font-main: 'Share Tech Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  transition: all 0.3s ease;
+  
+  /* CRT scanline effect for extreme Cyberdeck feel */
+  background-image: 
+    linear-gradient(
+      rgba(0, 255, 209, 0.03) 1px, 
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg, 
+      rgba(0, 255, 209, 0.03) 1px, 
+      transparent 1px
+    );
+  background-size: 20px 20px;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
